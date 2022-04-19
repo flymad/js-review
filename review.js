@@ -20,15 +20,17 @@
 // =================================================
 
 // 1.) Declare a variable
-
+let awesome = 'team';
 // 2.) Change the value of this variable
-
+awesome = 3;
 // 3.) Change the data type of this variable
-
+awesome = 'I love';
 // 4.) Create another variable and the one from above to concatenate
+let garden = 'why ' + awesome;
 
 // 5.) Use any of the variables above or create new ones and print using string interpolation
-
+console.log(`${awesome} ${garden}`)
+console.log(`${awesome}` +" "+ `${garden}`)
 // ================ Variable Names =================
 /* 
     • Case-sentive! Try it out! :O
@@ -44,53 +46,83 @@
 // Look up the following string methods!
 
 // Using charAt(), print the letter i in Sabrina
+let name1 = 'sabrina'
+//let name2 = charAt (4)
+//console.log(name1.charAt(4))
 
 // Define Unicode in a comment, and get the Unicode using charCodeAt() of the third character in Teddy
 
+// an international encoding standard for use with different languages and scripts, by which each letter, digit, or symbol is assigned a unique numeric value that applies across different platforms and programs.
+let name3 = 'Teddy'
+console.log(name3.charCodeAt(2))
+let charCode = name3.charCodeAt(2)
+
 // Using fromCharCode() - make it readable for us :). You'll see!
+console.log(String.fromCharCode(charCode))
 
 // Take your first and last name and concat()
+myFirstName = "Yaz";
+myLastName = "Taleb";
+let fullName = myFirstName.concat(' ',myLastName);
+
+console.log(myFirstName.concat(' ',myLastName));
 
 // Create a string and make it return true using startsWith()
-
+let strStartWith = "start"
+console.log(fullName.startsWith('p'));
 // Now use any variable with endsWith() and return false
 
 // Finish the following sentence. Use includes() and return true.
-const ozgur = 'Once upon a time Ozgur looked up at the Moon, '
+//const ozgur = 'Once upon a time Ozgur looked up at the Moon, '
+const ozgur = 'Once upon a time Ozgur looked up at the Moon, and saw sun!';
+console.log(ozgur.includes('Once upon a time Ozgur looked up at the Moon, '));
 
 // Help! I'm looking for my cow! Using indexOf() help Josh find his cow. What's the index of cow?
-let joshHadALittleLambOopsCow = "Josh lives in a farm. Josh was overwhelmed with coding. Josh is stressed out. Josh fed the chickens this morning. He watered his plants. He took his cow Betsy on a walk. Josh went home without Betsy. Josh went to bed that night, and realized he went home alone."
 
+let joshHadALittleLambOopsCow = "Josh lives in a farm. Josh was overwhelmed with coding. Josh is stressed out. Josh fed the chickens this morning. He watered his plants. He took his cow Betsy on a walk. Josh went home without Betsy. Josh went to bed that night, and realized he went home alone."
+console.log(joshHadALittleLambOopsCow.indexOf('cow'));
 // Oh no! The alien doppelgangers are here. Let's use our laserbeam lastIndexOf() to shoot down the last alien named Vanessa in the String Universe.
 
 const vanessa = "I am the Alpha Vanessa. I am the Omega Vanessa. We do not come in peace."
 
+console.log(vanessa.lastIndexOf('Vanessa'))
+3
 // Can we use length for strings? I don't know, you tell me.
 const noWeCantTeo = "but did you try it out though?"
-
+console.log(noWeCantTeo.length);
 // If only it was this easy to replace() my ex. Totally not joking, LOL. JK
 const replaceGokuWithVegeta = "For my DBZ fans, we all know Goku is the best!"
-
+console.log(replaceGokuWithVegeta.replace('Goku' , 'vegeta'));
 // Josh has been forgetful lately. Let's help Josh by using search(), and find their right 'wifey'. 
 const joshIsLookingForWifey = "WIFEY 1, wifey 2, WiFeY 3, Wifey 4"
+console.log(joshIsLookingForWifey.search('wifey'));
 
 // I guess we can share this pizza sentence. Use slice() to return the other half of pizza.
 const pizzaSentence = "pizza, other half of pizza"
+console.log(pizzaSentence.slice(7));
+
+
+
 
 // Now using the pizza sentence, return only pizza (before the comma)
+console.log(pizzaSentence.slice(0, 5))
 
 // Okay, but who decided to go to this expensive restaurant? Yaz, Poornima, and Leshawn decided to split() the bill. Return an array separating Yaz, Poornima, and Leshawn.
 const splitTheBill = "Yaz, Poornima, and Leshawn"
+let arrBill = splitTheBill.split(' ');
+delete arrBill[2];
+console.log(arrBill); // [ 'Yaz,', 'Poornima,' 'and' , 'Leshawn']
 
 // OH NO! The alien invaders from earlier were so against bill splitting so they decided to split() Yaz, Poornima, and Leshawn into pieces. Using splitTheBill, return an array separating all three by characters.
-
+arrBill = splitTheBill.split('')
+console.log(arrBill)
 // Use this toLowerCase()
 const angry = "LOWER YOUR VOICE DOWN IF YOU AIN'T PAYING MY BILLS."
 // Tuan was angry today. Create a string with words that Tuan would yell out. Now lowercase it, to tell Tuan to chill out. 
-
+console.log(angry.toLowerCase())
 // toUpperCase()
 const jahlunSaidToPutSomeRespectToHisName = "jahlun"
-
+console.log(jahlunSaidToPutSomeRespectToHisName.toUpperCase());
 // substring()
 // on the chopping block...
 
@@ -99,14 +131,16 @@ const basicGreeting = "Hello World"
 
 // Returns "JavaScript"
 const ohReally = "JavaScript Substring"
+console.log(ohReally.substring(0,ohReally.indexOf(" ")))
 
 // Returns aol.com
 const aslDays = "xXteoWuzHereXx@aol.com"
-
+console.log(aslDays.substring(15, 22));
 // trim()
 // If only I can use this for my love handles...
 // Create a variable with a string value with some extra loving on both sides.
-
+let strTrim = " Look at all these extra spaces. "
+console.log(strTrim.trim());
 // =================================================
 //                     BOOLEAN
 // =================================================
@@ -127,16 +161,35 @@ const d = "Keke"
 // console.log(a _ 15)
 // console.log(a _ b _ c)
 // console.log(c _ b _ a _ d)
-
+console.log(a < b);
+console.log(c > b); 
+console.log(d == d);
+console.log(d != a);
+console.log(a < 15);
+console.log(a < b < c);
+console.log(c > b > a != d);
 // =================================================
 //                     LOOPS
 // =================================================
 
 // Ken has a headache today and he said the room has been spinning like crazy. Make Ken's room spin 10 times using FOR LOOP. Make him print a sentence.
-
+let spin = 0
+for(let i = 0; i < 10; i++) {
+  console.log(`The room has spinned ${spin += 1}.`)
+}
 // Harry said that was so mean of Teo to do Ken dirty like that. Make Teo's vision spin 20 times FOR LOOP.
+let teoSpin = 0;
+for(let i = 0; i < 20; i++){
+  teoSpin += 1
+  console.log(`Teo's vision spin ${teoSpin}. `)
+}
 
 // But wait! Lisa said, while Teo is spinning 20 times. Let's make him say "I'm sorry". Print I'm sorry 20 times using a WHILE loop.
+let i = 0
+let saySorry =0; while (i<20) { console.log(`I'm sorry ${saySorry+=1}`)
+i++}
+
+
 
 // For the next three, look for the syntax of FOR IN and FOR OF loop. Very easy to understand syntax, and very clean :) 
 
@@ -146,6 +199,18 @@ const whateverQueenBeySaid = {
   thing2: 'clotes',
   thing3: 'gaming console'
 }
+// to store a empty str
+let text = "";
+
+// to loop thru whateverQueenBeySaid
+for (let x in whateverQueenBeySaid){
+
+  // add each property of whateverQueenBeySaid to text str variable.
+  text += whateverQueenBeySaid[x] + " ";
+}
+
+// Print new text with whateverQueenBeySaid properties
+console.log(text);
 
 // Using (FOR IN LOOP), print the indexes of the array.
 const lana = ['l', 'a', 'n', 'a']
@@ -156,6 +221,12 @@ const tia = ['teo', 'the', 'syntax', 'of', 'this', 'is', 'cleaner']
 // Look into forEach() loop, it accepts a callback aka a function inside a function. 
 // Swathi said don't forget each person. No person left behind! Use forEach() to iterate over the array perscholas. Inside the function, create a variable with the string "PS". Print their name in the console concatenated with the variable. 
 const perscholas = ['Amira', 'Arely', 'Jonathan']
+for (let i = perscholas.length -1; i >=0; i-= 1) {
+console.log(`${i}. ${perscholas[i]}`);
+}
+//perscholas.forEach(student => {
+  //console.log(student)
+ // })
 
 // =================================================
 //                     ARRAYS
@@ -177,13 +248,14 @@ const perscholas = ['Amira', 'Arely', 'Jonathan']
 const fruits = ['apple', 'banana', 'orange']
 
 // Print banana
-
+console.log(fruits[1]);
 // Let's turn it up a notch. I won't tell you what array methods to use. 
 
 // Join all the elements of the array into a string separated by a space.
-
+const strFruits = fruits.join(' ')
+console.log(strFruits);
 // Remove orange
-
+console.log(fruits.splice)
 // Add strawberry, kiwi, and grapes at the end
 
 // Remove apple
